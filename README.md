@@ -1,6 +1,4 @@
-<div align="center">
-
-# 🚀 Nexora — Digital Agency
+# Nexora — Digital Agency
 
 **Enterprise-grade design, without the overhead.**
 
@@ -11,8 +9,6 @@ Launch stunning, responsive sites — perfect for early-stage startups and growi
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
-
-</div>
 
 ---
 
