@@ -4,15 +4,13 @@
 
 Launch stunning, responsive sites — perfect for early-stage startups and growing SaaS companies.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-nexora--digital--ui.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white)](https://nexora-digital-ui.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.3.5-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
 
 ---
 
-## 📸 Preview
+## Preview
 
 ![Nexora – Enterprise-grade design, without the overhead](./public/screenshot.png)
 
@@ -20,7 +18,7 @@ Launch stunning, responsive sites — perfect for early-stage startups and growi
 
 ---
 
-## ✨ Features
+## Features
 
 - **Hero Section** — Bold headline with animated gradient background and partner badges
 - **About** — Agency story and value proposition
@@ -34,7 +32,7 @@ Launch stunning, responsive sites — perfect for early-stage startups and growi
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Version | Purpose |
 |---|---|---|
@@ -73,7 +71,7 @@ nexora-agency/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -105,7 +103,7 @@ npm run start
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 This project is deployed on **Vercel**.
 
