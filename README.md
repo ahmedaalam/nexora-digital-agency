@@ -14,7 +14,7 @@ Launch stunning, responsive sites — perfect for early-stage startups and growi
 
 ![Nexora – Enterprise-grade design, without the overhead](./public/screenshot.png)
 
-> 🔗 **Live Site:** [https://nexora-digital-ui.vercel.app/](https://nexora-digital-ui.vercel.app/)
+> **Live Site:** [https://nexora-digital-ui.vercel.app/](https://nexora-digital-ui.vercel.app/)
 
 ---
 
@@ -46,7 +46,7 @@ Launch stunning, responsive sites — perfect for early-stage startups and growi
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 nexora-agency/
@@ -108,10 +108,3 @@ npm run start
 This project is deployed on **Vercel**.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/nexora-agency)
-
----
-
-## 📄 License
-
-This project is private and proprietary. All rights reserved © Nexora Digital Agency.
-
