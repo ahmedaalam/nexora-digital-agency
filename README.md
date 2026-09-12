@@ -12,7 +12,7 @@ Launch stunning, responsive sites — perfect for early-stage startups and growi
 
 ## Preview
 
-![Nexora – Enterprise-grade design, without the overhead](./public/screenshot.png)
+![Nexora – Enterprise-grade design, without the overhead](https://raw.githubusercontent.com/ahmedaalam/nexora-digital-agency/main/public/screenshot.png)
 
 > **Live Site:** [https://nexora-digital-ui.vercel.app/](https://nexora-digital-ui.vercel.app/)
 
