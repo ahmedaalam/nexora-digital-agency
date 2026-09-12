@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NEXORA | Enterprise-Grade Digital Solutions for Modern Businesses",
+  title: "Nexora | Enterprise-Grade Digital Solutions for Modern Businesses",
   description:
     "We build fast, scalable, and modern web experiences, high-converting SaaS platforms, and UI/UX systems for ambitious startups and global companies.",
   keywords: [
