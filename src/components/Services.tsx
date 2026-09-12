@@ -11,6 +11,7 @@ import {
   Zap,
   Globe,
   Cpu,
+  Compass,
 } from "lucide-react";
 
 export default function Services() {
@@ -20,8 +21,8 @@ export default function Services() {
       title: "Web Development",
       category: "Engineering",
       icon: Code2,
-      color: "from-indigo-500 to-blue-500",
-      lightBg: "bg-indigo-50 text-indigo-600 border-indigo-100",
+      color: "from-purple-500 to-indigo-500",
+      lightBg: "bg-purple-50 text-purple-600 border-purple-100",
       description:
         "High-performance, modern web applications built on Next.js, React, and TypeScript with sub-second page loads and robust SEO foundations.",
       features: [
@@ -54,8 +55,8 @@ export default function Services() {
       title: "SaaS Development",
       category: "Cloud Architecture",
       icon: Layers,
-      color: "from-blue-600 to-cyan-500",
-      lightBg: "bg-blue-50 text-blue-600 border-blue-100",
+      color: "from-purple-500 to-indigo-500",
+      lightBg: "bg-purple-50 text-purple-600 border-purple-100",
       description:
         "End-to-end cloud platforms tailored for scaling businesses. We engineer multi-tenant systems, payment gateways, and real-time data pipelines.",
       features: [
@@ -70,9 +71,9 @@ export default function Services() {
       id: "branding",
       title: "Branding & Strategy",
       category: "Identity",
-      icon: Sparkles,
-      color: "from-violet-500 to-pink-500",
-      lightBg: "bg-violet-50 text-violet-600 border-violet-100",
+      icon: Compass,
+      color: "from-purple-500 to-indigo-500",
+      lightBg: "bg-purple-50 text-purple-600 border-purple-100",
       description:
         "Memorable brand identities that command authority in saturated tech markets. We define your visual language, positioning, and digital guidelines.",
       features: [
@@ -86,7 +87,10 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-slate-50/70 relative overflow-hidden">
+    <section
+      id="services"
+      className="py-24 bg-slate-50/70 relative overflow-hidden"
+    >
       {/* Subtle backdrop decoration */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-indigo-100/40 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-100/30 rounded-full blur-3xl pointer-events-none" />
@@ -95,15 +99,17 @@ export default function Services() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-100/80 border border-indigo-200/60 text-indigo-700 text-xs font-semibold uppercase tracking-wider mb-4">
-            <Zap className="w-3.5 h-3.5" />
+            <Layers className="w-3.5 h-3.5" />
             Capabilities & Expertise
           </div>
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 tracking-tight">
             Tailored services engineered for scale
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            From strategic design systems to full-stack web platforms, our cross-functional team delivers
-            uncompromising quality at venture-backed speed.
+            From strategic design systems to full-stack web platforms, our
+            cross-functional team delivers uncompromising quality at
+            venture-backed speed.
           </p>
         </div>
 
@@ -125,7 +131,7 @@ export default function Services() {
                   {/* Top Bar: Icon + Category Badge */}
                   <div className="flex items-center justify-between mb-6">
                     <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-tr ${service.color} text-white shadow-md shadow-indigo-500/20 group-hover:scale-110 transition-transform duration-300`}
+                      className="w-12 h-12 rounded-xl flex items-center justify-center bg-indigo-600 text-white shadow-md shadow-indigo-600/25 group-hover:scale-110 transition-transform duration-300"
                     >
                       <Icon className="w-6 h-6" />
                     </div>
@@ -148,7 +154,10 @@ export default function Services() {
                   {/* Feature Checklist */}
                   <div className="space-y-2.5 pt-4 border-t border-slate-100">
                     {service.features.map((feature, fIdx) => (
-                      <div key={fIdx} className="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
+                      <div
+                        key={fIdx}
+                        className="flex items-center gap-2.5 text-sm text-slate-700 font-medium"
+                      >
                         <CheckCircle className="w-4 h-4 text-indigo-500 shrink-0" />
                         <span>{feature}</span>
                       </div>

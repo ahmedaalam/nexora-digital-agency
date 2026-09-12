@@ -10,6 +10,7 @@ import {
   X,
   CheckCircle,
   Eye,
+  LayoutGrid,
 } from "lucide-react";
 
 interface Project {
@@ -34,10 +35,17 @@ export default function Projects() {
       id: "nova",
       title: "Nova",
       category: "Product Website & Analytics SaaS",
-      subtitle: "Next-gen enterprise analytics platform with real-time AI insights",
+      subtitle:
+        "Next-gen enterprise analytics platform with real-time AI insights",
       description:
         "Nova needed a hyper-modern marketing and web application interface to showcase their predictive intelligence software. We designed and built an interactive dashboard environment with real-time metric updates, sub-second latency, and a 42% lift in demo signups.",
-      techStack: ["Next.js 16", "TypeScript", "Tailwind CSS", "Framer Motion", "Recharts"],
+      techStack: [
+        "Next.js 16",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Recharts",
+      ],
       metrics: "+42% Demo Conversions",
       color: "from-indigo-600 to-violet-500",
       badgeBg: "bg-indigo-50 text-indigo-700 border-indigo-200",
@@ -48,10 +56,17 @@ export default function Projects() {
       id: "wanderly",
       title: "Wanderly",
       category: "Travel & Hospitality Platform",
-      subtitle: "Immersive discovery engine and booking portal for boutique stays",
+      subtitle:
+        "Immersive discovery engine and booking portal for boutique stays",
       description:
         "Wanderly required a consumer-facing travel experience that combined editorial storytelling with lightning-fast booking flows. We crafted a rich image-driven UI with instant filters, map clustering, and seamless Apple Pay/Stripe checkout.",
-      techStack: ["React", "Next.js", "Tailwind CSS", "Stripe API", "Mapbox GL"],
+      techStack: [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Stripe API",
+        "Mapbox GL",
+      ],
       metrics: "3.2x Booking Velocity",
       color: "from-sky-500 to-blue-600",
       badgeBg: "bg-sky-50 text-sky-700 border-sky-200",
@@ -62,10 +77,17 @@ export default function Projects() {
       id: "aether",
       title: "Aether",
       category: "3D Experience & Spatial Web",
-      subtitle: "Interactive WebGL digital showroom and virtual hardware preview",
+      subtitle:
+        "Interactive WebGL digital showroom and virtual hardware preview",
       description:
         "Aether pioneered next-gen spatial audio hardware and needed a digital presence that pushed web boundaries. We engineered a customized WebGL 3D product visualizer that runs smoothly at 60 FPS across desktop and mobile devices.",
-      techStack: ["Three.js", "WebGL", "Next.js", "GLSL Shaders", "Tailwind CSS"],
+      techStack: [
+        "Three.js",
+        "WebGL",
+        "Next.js",
+        "GLSL Shaders",
+        "Tailwind CSS",
+      ],
       metrics: "60 FPS WebGL Rendering",
       color: "from-purple-600 to-pink-500",
       badgeBg: "bg-purple-50 text-purple-700 border-purple-200",
@@ -75,20 +97,25 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-slate-50/50 relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-24 bg-slate-50/50 relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100/80 border border-indigo-200/60 text-indigo-700 text-xs font-semibold uppercase tracking-wider mb-4">
-              <Layers className="w-3.5 h-3.5" />
+              <LayoutGrid className="w-3.5 h-3.5" />
               Featured Case Studies
             </div>
+
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 tracking-tight">
               Selected client work
             </h2>
             <p className="mt-4 text-lg text-slate-600">
-              A curated selection of modern digital products, SaaS applications, and interactive web experiences we have engineered.
+              A curated selection of modern digital products, SaaS applications,
+              and interactive web experiences we have engineered.
             </p>
           </div>
 
@@ -117,7 +144,9 @@ export default function Projects() {
             >
               <div>
                 {/* Visual Mockup Header */}
-                <div className={`relative h-56 w-full overflow-hidden bg-gradient-to-br ${project.accentGradient} p-4 border-b border-slate-100 flex flex-col justify-between`}>
+                <div
+                  className={`relative h-56 w-full overflow-hidden bg-gradient-to-br ${project.accentGradient} p-4 border-b border-slate-100 flex flex-col justify-between`}
+                >
                   {/* Browser top-bar mockup */}
                   <div className="flex items-center justify-between bg-white/90 backdrop-blur-xs px-3 py-1.5 rounded-lg border border-slate-200/60 shadow-xs">
                     <div className="flex items-center gap-1.5">
@@ -136,8 +165,12 @@ export default function Projects() {
                     {project.previewType === "dashboard" && (
                       <div className="w-full bg-white rounded-xl shadow-md p-3 border border-slate-200/70">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-[10px] font-semibold text-slate-500">Live Analytics</span>
-                          <span className="text-[9px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">Active</span>
+                          <span className="text-[10px] font-semibold text-slate-500">
+                            Live Analytics
+                          </span>
+                          <span className="text-[9px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
+                            Active
+                          </span>
                         </div>
                         <div className="h-12 flex items-end gap-1.5 justify-between px-1">
                           <div className="w-full bg-indigo-200 rounded-t h-4 group-hover:h-6 transition-all" />
@@ -152,10 +185,16 @@ export default function Projects() {
                     {project.previewType === "travel" && (
                       <div className="w-full bg-white rounded-xl shadow-md p-3 border border-slate-200/70">
                         <div className="flex items-center gap-2 mb-2">
-                          <div className="w-6 h-6 rounded-md bg-sky-500 flex items-center justify-center text-white text-[10px] font-bold">W</div>
+                          <div className="w-6 h-6 rounded-md bg-sky-500 flex items-center justify-center text-white text-[10px] font-bold">
+                            W
+                          </div>
                           <div>
-                            <div className="text-[10px] font-bold text-slate-800">Alps Horizon Lodge</div>
-                            <div className="text-[8px] text-slate-400">Zermatt, Switzerland</div>
+                            <div className="text-[10px] font-bold text-slate-800">
+                              Alps Horizon Lodge
+                            </div>
+                            <div className="text-[8px] text-slate-400">
+                              Zermatt, Switzerland
+                            </div>
                           </div>
                         </div>
                         <div className="h-9 bg-gradient-to-r from-sky-100 to-indigo-100 rounded-lg flex items-center justify-center text-[10px] font-medium text-sky-800">
@@ -168,7 +207,9 @@ export default function Projects() {
                       <div className="w-full bg-slate-900 rounded-xl shadow-md p-3 text-white border border-slate-700">
                         <div className="flex items-center justify-between mb-1 text-[10px] text-purple-300">
                           <span>3D Canvas Mesh</span>
-                          <span className="font-mono text-[9px] text-emerald-400">60 FPS</span>
+                          <span className="font-mono text-[9px] text-emerald-400">
+                            60 FPS
+                          </span>
                         </div>
                         <div className="h-10 flex items-center justify-center">
                           <div className="w-8 h-8 rounded-full border-2 border-dashed border-purple-400 group-hover:rotate-180 transition-transform duration-700 flex items-center justify-center">
@@ -193,15 +234,6 @@ export default function Projects() {
 
                 {/* Content Details */}
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold text-indigo-600 tracking-wider uppercase">
-                      {project.category}
-                    </span>
-                    <span className="text-xs font-bold text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full">
-                      {project.metrics}
-                    </span>
-                  </div>
-
                   <h3 className="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
                     {project.title}
                   </h3>
@@ -275,12 +307,20 @@ export default function Projects() {
 
               <div className="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center justify-between">
                 <div>
-                  <span className="text-xs text-slate-500 uppercase font-semibold">Key Result</span>
-                  <div className="text-lg font-bold text-indigo-600">{selectedProject.metrics}</div>
+                  <span className="text-xs text-slate-500 uppercase font-semibold">
+                    Key Result
+                  </span>
+                  <div className="text-lg font-bold text-indigo-600">
+                    {selectedProject.metrics}
+                  </div>
                 </div>
                 <div className="text-right">
-                  <span className="text-xs text-slate-500 uppercase font-semibold">Timeline</span>
-                  <div className="text-sm font-semibold text-slate-800">4-Week Turnaround</div>
+                  <span className="text-xs text-slate-500 uppercase font-semibold">
+                    Timeline
+                  </span>
+                  <div className="text-sm font-semibold text-slate-800">
+                    4-Week Turnaround
+                  </div>
                 </div>
               </div>
 

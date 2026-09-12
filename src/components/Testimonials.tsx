@@ -38,7 +38,10 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-white relative overflow-hidden">
+    <section
+      id="testimonials"
+      className="py-24 bg-white relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -50,7 +53,8 @@ export default function Testimonials() {
             Trusted by tech innovators worldwide
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Hear directly from founders, CTOs, and product leaders who scaled their digital products with Nexora.
+            Hear directly from founders, CTOs, and product leaders who scaled
+            their digital products with Nexora.
           </p>
         </div>
 
@@ -70,7 +74,10 @@ export default function Testimonials() {
                 {/* 5-Star Rating */}
                 <div className="flex items-center gap-1 mb-6 text-amber-400">
                   {[...Array(item.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    <Star
+                      key={i}
+                      className="w-4 h-4 fill-amber-400 text-amber-400"
+                    />
                   ))}
                 </div>
 
@@ -97,14 +104,6 @@ export default function Testimonials() {
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* Bottom review badge */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-600">
-            <span className="flex text-amber-400">★★★★★</span>
-            <span>4.98 / 5.0 Average rating across 65+ independent enterprise reviews</span>
-          </div>
         </div>
       </div>
     </section>

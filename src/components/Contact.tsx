@@ -57,7 +57,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-slate-50/70 relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-24 bg-slate-50/70 relative overflow-hidden"
+    >
       {/* Background radial highlight */}
       <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl pointer-events-none" />
 
@@ -75,7 +78,8 @@ export default function Contact() {
             </h2>
 
             <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-              Tell us about your product goals. We review all inquiries within 24 business hours and prepare a tailored strategy roadmap.
+              Tell us about your product goals. We review all inquiries within
+              24 business hours and prepare a tailored strategy roadmap.
             </p>
 
             {/* Quick trust metrics */}
@@ -85,24 +89,35 @@ export default function Contact() {
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-slate-900">Guaranteed 24h Response</div>
-                  <div className="text-xs text-slate-500">Fast NDA execution & transparent estimates</div>
+                  <div className="text-sm font-bold text-slate-900">
+                    Guaranteed 24h Response
+                  </div>
+                  <div className="text-xs text-slate-500">
+                    Fast NDA execution & transparent estimates
+                  </div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
-                <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-slate-900">Direct Senior Leadership</div>
-                  <div className="text-xs text-slate-500">Speak directly with principal engineers & designers</div>
+                  <div className="text-sm font-bold text-slate-900">
+                    Direct Senior Leadership
+                  </div>
+                  <div className="text-xs text-slate-500">
+                    Speak directly with principal engineers & designers
+                  </div>
                 </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-indigo-50/50 border border-indigo-100 text-xs text-indigo-900">
                 <span className="font-bold">Prefer email?</span> Reach us at{" "}
-                <a href="mailto:hello@nexora.agency" className="underline font-semibold hover:text-indigo-700">
+                <a
+                  href="mailto:hello@nexora.agency"
+                  className="underline font-semibold hover:text-indigo-700"
+                >
                   hello@nexora.agency
                 </a>
               </div>
@@ -124,9 +139,19 @@ export default function Contact() {
                     <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-4">
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900">Message received!</h3>
+                    <h3 className="text-2xl font-bold text-slate-900">
+                      Message received!
+                    </h3>
                     <p className="mt-2 text-slate-600 max-w-md mx-auto text-sm">
-                      Thank you for reaching out, <span className="font-semibold text-slate-900">{formData.name}</span>. A senior partner will contact you at <span className="font-semibold text-slate-900">{formData.email}</span> within 24 hours.
+                      Thank you for reaching out,{" "}
+                      <span className="font-semibold text-slate-900">
+                        {formData.name}
+                      </span>
+                      . A senior partner will contact you at{" "}
+                      <span className="font-semibold text-slate-900">
+                        {formData.email}
+                      </span>{" "}
+                      within 24 hours.
                     </p>
                     <button
                       onClick={() => {
@@ -158,7 +183,8 @@ export default function Contact() {
                         Book a Strategy Consultation
                       </h3>
                       <p className="text-xs text-slate-500">
-                        Fill out the details below and we will get back to you promptly.
+                        Fill out the details below and we will get back to you
+                        promptly.
                       </p>
                     </div>
 
@@ -172,7 +198,9 @@ export default function Contact() {
                           <button
                             type="button"
                             key={item}
-                            onClick={() => setFormData({ ...formData, service: item })}
+                            onClick={() =>
+                              setFormData({ ...formData, service: item })
+                            }
                             className={`px-3 py-2 rounded-xl text-xs font-medium border text-center transition-all ${
                               formData.service === item
                                 ? "bg-indigo-600 text-white border-indigo-600 shadow-xs"
@@ -199,7 +227,9 @@ export default function Contact() {
                           type="text"
                           required
                           value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, name: e.target.value })
+                          }
                           placeholder="Alex Morgan"
                           className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-slate-900 bg-white"
                         />
@@ -217,7 +247,9 @@ export default function Contact() {
                           type="email"
                           required
                           value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, email: e.target.value })
+                          }
                           placeholder="alex@company.com"
                           className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-slate-900 bg-white"
                         />
@@ -237,7 +269,9 @@ export default function Contact() {
                         required
                         rows={4}
                         value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, message: e.target.value })
+                        }
                         placeholder="Tell us about your project timeline, goals, and any specific technical requirements..."
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-slate-900 bg-white resize-none"
                       />
@@ -262,7 +296,8 @@ export default function Contact() {
                     </div>
 
                     <div className="text-center text-[11px] text-slate-400">
-                      We treat your NDA and IP with strictest enterprise confidentiality.
+                      We treat your NDA and IP with strictest enterprise
+                      confidentiality.
                     </div>
                   </motion.form>
                 )}

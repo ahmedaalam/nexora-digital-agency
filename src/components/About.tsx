@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Users, Target, Rocket, CheckCircle2, TrendingUp } from "lucide-react";
+import { Award, CheckCircle2 } from "lucide-react";
 
 export default function About() {
   const stats = [
@@ -30,15 +30,18 @@ export default function About() {
   const pillars = [
     {
       title: "Design with Intent",
-      description: "Every pixel serves a business purpose. We blend aesthetics with user-centric usability.",
+      description:
+        "Every pixel serves a business purpose. We blend aesthetics with user-centric usability.",
     },
     {
       title: "Engineered for Resilience",
-      description: "Rock-solid architectures built with Next.js, automated testing, and scalable cloud infra.",
+      description:
+        "Rock-solid architectures built with Next.js, automated testing, and scalable cloud infra.",
     },
     {
       title: "Agile Velocity",
-      description: "Rapid sprints with transparent communication, real-time Slack channels, and weekly demos.",
+      description:
+        "Rapid sprints with transparent communication, real-time Slack channels, and weekly demos.",
     },
   ];
 
@@ -58,63 +61,35 @@ export default function About() {
             </h2>
 
             <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-              Founded by veteran product designers and software engineers, Nexora was built to eliminate
-              the friction typical of bloated agency workflows. We operate as an elite embedded digital
-              partner for high-growth tech ventures.
+              Founded by veteran product designers and software engineers,
+              Nexora was built to eliminate the friction typical of bloated
+              agency workflows. We operate as an elite embedded digital partner
+              for high-growth tech ventures.
             </p>
 
             <p className="mt-4 text-base text-slate-600 leading-relaxed">
-              Our mission is singular: empower startups and enterprise teams to launch category-defining
-              web platforms and SaaS products that captivate users, drive revenue, and scale seamlessly.
+              Our mission is singular: empower startups and enterprise teams to
+              launch category-defining web platforms and SaaS products that
+              captivate users, drive revenue, and scale seamlessly.
             </p>
-
-            {/* Core Values / Pillars */}
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-slate-100">
-              {pillars.map((pillar, idx) => (
-                <div key={idx} className="space-y-1.5">
-                  <div className="flex items-center gap-1.5 font-bold text-slate-900 text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" />
-                    <span>{pillar.title}</span>
-                  </div>
-                  <p className="text-xs text-slate-500 leading-normal">
-                    {pillar.description}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* Right Column: Mission Card & Interactive Badge */}
-          <div className="lg:col-span-5">
-            <div className="relative bg-gradient-to-b from-indigo-50/60 to-white rounded-3xl p-8 border border-slate-200/80 shadow-lg">
-              <div className="absolute -top-3 -right-3 px-3.5 py-1.5 rounded-full bg-indigo-600 text-white text-xs font-bold shadow-md shadow-indigo-500/30 flex items-center gap-1.5">
-                <Rocket className="w-3.5 h-3.5" />
-                Vetted Top 1%
-              </div>
-
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-indigo-600/30">
-                  N
+          {/* Right Column: Pillars placed where the card was */}
+          <div className="lg:col-span-5 space-y-4">
+            {pillars.map((pillar, idx) => (
+              <div
+                key={idx}
+                className="p-5 sm:p-6 rounded-2xl bg-slate-50/80 border border-slate-200/70 hover:border-indigo-200 hover:bg-indigo-50/20 transition-all shadow-xs"
+              >
+                <div className="flex items-center gap-2.5 font-bold text-slate-900 text-base mb-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" />
+                  <span>{pillar.title}</span>
                 </div>
-                <div>
-                  <h4 className="font-bold text-slate-900 text-lg">Nexora Studio Collective</h4>
-                  <p className="text-xs text-slate-500">San Francisco • London • Remote</p>
-                </div>
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed pl-6.5">
+                  {pillar.description}
+                </p>
               </div>
-
-              <blockquote className="text-slate-700 italic text-sm leading-relaxed border-l-2 border-indigo-500 pl-4 py-1 mb-6">
-                &ldquo;Nexora isn&apos;t just another dev shop. They operated like true co-founders,
-                challenging our assumptions and elevating our UI to a world-class standard.&rdquo;
-              </blockquote>
-
-              <div className="flex items-center justify-between text-xs text-slate-500 pt-4 border-t border-slate-200/70">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                  <span>Currently accepting new clients</span>
-                </div>
-                <span className="font-semibold text-indigo-600">Q3 / Q4 2026</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

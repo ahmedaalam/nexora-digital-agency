@@ -66,7 +66,9 @@ export default function Navbar() {
                 className="inline-flex items-center gap-1 text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors"
               >
                 <span>{link.name}</span>
-                {link.hasDropdown && <ChevronDown className="w-3.5 h-3.5 text-slate-400" />}
+                {link.hasDropdown && (
+                  <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+                )}
               </a>
             ))}
           </nav>
@@ -81,7 +83,7 @@ export default function Navbar() {
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-indigo-600 via-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 shadow-md shadow-indigo-500/25 hover:shadow-indigo-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-500/25 hover:shadow-indigo-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
             >
               Try for free
             </a>
@@ -93,7 +95,11 @@ export default function Navbar() {
             className="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100/80 focus:outline-none"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
