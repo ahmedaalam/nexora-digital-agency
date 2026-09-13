@@ -99,12 +99,3 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ```bash
 npm run build
 npm run start
-```
-
----
-
-## Deployment
-
-This project is deployed on **Vercel**.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/nexora-agency)
