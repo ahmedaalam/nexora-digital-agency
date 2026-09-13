@@ -17,12 +17,51 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#" },
+    { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Portfolio", href: "#projects" },
     { name: "Services", href: "#services", hasDropdown: true },
     { name: "Reviews", href: "#testimonials" },
   ];
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+
+    if (href === "#" || href === "#home") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      try {
+        window.history.pushState(null, "", window.location.pathname);
+      } catch {}
+      return;
+    }
+
+    const targetId = href.replace(/^#/, "");
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      setTimeout(() => {
+        const headerOffset = 76;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: "smooth",
+        });
+
+        try {
+          window.history.pushState(null, "", href);
+        } catch {}
+      }, 60);
+    }
+  };
 
   return (
     <header
@@ -36,7 +75,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo matching the exact reference image with 6-dot matrix */}
           <a
-            href="#"
+            href="#home"
+            onClick={(e) => handleNavClick(e, "#home")}
             className="flex items-center gap-2.5 group focus:outline-none"
             aria-label="Nexora Home"
           >
@@ -63,6 +103,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="inline-flex items-center gap-1 text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors"
               >
                 <span>{link.name}</span>
@@ -77,12 +118,14 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-5">
             <a
               href="#contact"
+              onClick={(e) => handleNavClick(e, "#contact")}
               className="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors"
             >
               Log in
             </a>
             <a
               href="#contact"
+              onClick={(e) => handleNavClick(e, "#contact")}
               className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-500/25 hover:shadow-indigo-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
             >
               Try for free
@@ -119,8 +162,8 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors"
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="px-3 py-2 text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/60 rounded-lg transition-colors cursor-pointer"
                 >
                   {link.name}
                 </a>
@@ -128,8 +171,8 @@ export default function Navbar() {
               <div className="pt-3 mt-2 border-t border-slate-100 flex flex-col gap-2">
                 <a
                   href="#contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="w-full text-center py-2.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-600/25"
+                  onClick={(e) => handleNavClick(e, "#contact")}
+                  className="w-full text-center py-2.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md shadow-indigo-600/25 cursor-pointer"
                 >
                   Try for free
                 </a>

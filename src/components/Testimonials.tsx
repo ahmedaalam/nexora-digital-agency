@@ -40,7 +40,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-24 bg-white relative overflow-hidden"
+      className="py-24 bg-white relative overflow-hidden scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 relative z-10">
         {/* Header */}

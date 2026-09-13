@@ -59,7 +59,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 bg-slate-50/70 relative overflow-hidden"
+      className="py-24 bg-slate-50/70 relative overflow-hidden scroll-mt-20"
     >
       {/* Background radial highlight */}
       <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-indigo-100/30 rounded-full blur-3xl pointer-events-none" />

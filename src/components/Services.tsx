@@ -89,7 +89,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-24 bg-slate-50/70 relative overflow-hidden"
+      className="py-24 bg-slate-50/70 relative overflow-hidden scroll-mt-20"
     >
       {/* Subtle backdrop decoration */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-indigo-100/40 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />

@@ -78,7 +78,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white pb-14 sm:pb-20">
+    <section id="home" className="relative overflow-hidden bg-white pb-14 sm:pb-20 scroll-mt-20">
       {/* ── Background Wave Image ────────────────────────────────── */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none">
         <Image
