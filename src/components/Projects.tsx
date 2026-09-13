@@ -32,13 +32,13 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
-      id: "nova",
-      title: "Nova",
-      category: "Product Website & Analytics SaaS",
+      id: "pulse",
+      title: "Pulse",
+      category: "SaaS Analytics Dashboard",
       subtitle:
-        "Next-gen enterprise analytics platform with real-time AI insights",
+        "Real-time revenue intelligence platform for modern finance teams",
       description:
-        "Nova needed a hyper-modern marketing and web application interface to showcase their predictive intelligence software. We designed and built an interactive dashboard environment with real-time metric updates, sub-second latency, and a 42% lift in demo signups.",
+        "Pulse required a high-density, data-rich dashboard that could surface actionable insights without overwhelming users. We architected a live analytics interface with animated KPI widgets, drill-down cohort charts, and a 38% reduction in time-to-insight — directly linked to a 42% lift in enterprise demo conversions.",
       techStack: [
         "Next.js 16",
         "TypeScript",
@@ -46,20 +46,20 @@ export default function Projects() {
         "Framer Motion",
         "Recharts",
       ],
-      metrics: "+42% Demo Conversions",
+      metrics: "+42% Enterprise Conversions",
       color: "from-indigo-600 to-violet-500",
       badgeBg: "bg-indigo-50 text-indigo-700 border-indigo-200",
       accentGradient: "from-indigo-500/10 via-purple-500/10 to-transparent",
       previewType: "dashboard",
     },
     {
-      id: "wanderly",
-      title: "Wanderly",
+      id: "drifto",
+      title: "Drifto",
       category: "Travel & Hospitality Platform",
       subtitle:
-        "Immersive discovery engine and booking portal for boutique stays",
+        "Curated boutique travel marketplace with smart destination discovery",
       description:
-        "Wanderly required a consumer-facing travel experience that combined editorial storytelling with lightning-fast booking flows. We crafted a rich image-driven UI with instant filters, map clustering, and seamless Apple Pay/Stripe checkout.",
+        "Drifto needed a consumer-facing travel marketplace that blended editorial storytelling with a frictionless booking experience. We built a geo-filtered discovery engine, immersive property pages, and a one-tap checkout flow with Stripe & Apple Pay — achieving a 3.2x increase in booking velocity.",
       techStack: [
         "React",
         "Next.js",
@@ -74,13 +74,13 @@ export default function Projects() {
       previewType: "travel",
     },
     {
-      id: "aether",
-      title: "Aether",
-      category: "3D Experience & Spatial Web",
+      id: "lumina",
+      title: "Lumina",
+      category: "3D Product & Spatial Web",
       subtitle:
-        "Interactive WebGL digital showroom and virtual hardware preview",
+        "Immersive WebGL showroom for a next-gen spatial audio hardware brand",
       description:
-        "Aether pioneered next-gen spatial audio hardware and needed a digital presence that pushed web boundaries. We engineered a customized WebGL 3D product visualizer that runs smoothly at 60 FPS across desktop and mobile devices.",
+        "Lumina needed their hardware launch to be an event, not just a website. We engineered a fully interactive WebGL product visualizer with custom GLSL shaders, 360° model rotation, and real-time material switching — running at a locked 60 FPS across all modern devices and driving a 28% increase in direct pre-orders.",
       techStack: [
         "Three.js",
         "WebGL",
@@ -88,7 +88,7 @@ export default function Projects() {
         "GLSL Shaders",
         "Tailwind CSS",
       ],
-      metrics: "60 FPS WebGL Rendering",
+      metrics: "+28% Pre-Order Rate",
       color: "from-purple-600 to-pink-500",
       badgeBg: "bg-purple-50 text-purple-700 border-purple-200",
       accentGradient: "from-purple-500/10 via-pink-500/10 to-transparent",
@@ -131,7 +131,7 @@ export default function Projects() {
         </div>
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -186,7 +186,7 @@ export default function Projects() {
                       <div className="w-full bg-white rounded-xl shadow-md p-3 border border-slate-200/70">
                         <div className="flex items-center gap-2 mb-2">
                           <div className="w-6 h-6 rounded-md bg-sky-500 flex items-center justify-center text-white text-[10px] font-bold">
-                            W
+                            D
                           </div>
                           <div>
                             <div className="text-[10px] font-bold text-slate-800">

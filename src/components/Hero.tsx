@@ -99,7 +99,7 @@ export default function Hero() {
          * Spacer: pushes content into the lower half of the viewport
          * so the purple wave art fills the top ~48-50%, matching the reference picture.
          */}
-        <div className="h-[46vh] min-h-[260px] max-h-[380px]" />
+        <div className="h-[42vh] min-h-[200px] max-h-[380px]" />
 
         {/* ── Partner Badges ────────────────────────────────────── */}
         <motion.div

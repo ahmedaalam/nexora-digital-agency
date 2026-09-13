@@ -85,7 +85,7 @@ export default function About() {
                   <CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" />
                   <span>{pillar.title}</span>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed pl-6.5">
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed pl-7">
                   {pillar.description}
                 </p>
               </div>
