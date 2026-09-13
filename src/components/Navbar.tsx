@@ -31,22 +31,26 @@ export default function Navbar() {
     e.preventDefault();
     setMobileMenuOpen(false);
 
-    if (href === "#" || href === "#home") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-      try {
-        window.history.pushState(null, "", window.location.pathname);
-      } catch {}
-      return;
-    }
+    setTimeout(() => {
+      if (href === "#" || href === "#home") {
+        const heroElement = document.getElementById("home");
+        if (heroElement) {
+          heroElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        try {
+          window.history.pushState(null, "", window.location.pathname);
+        } catch {}
+        return;
+      }
 
-    const targetId = href.replace(/^#/, "");
-    const targetElement = document.getElementById(targetId);
+      const targetId = href.replace(/^#/, "");
+      const targetElement = document.getElementById(targetId);
 
-    if (targetElement) {
-      setTimeout(() => {
+      if (targetElement) {
         const headerOffset = 76;
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.scrollY - headerOffset;
@@ -59,8 +63,8 @@ export default function Navbar() {
         try {
           window.history.pushState(null, "", href);
         } catch {}
-      }, 60);
-    }
+      }
+    }, 60);
   };
 
   return (
